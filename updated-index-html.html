@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gita Sloka Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-50 font-sans">
+    <header class="bg-sky-800 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="updated-index-html.html" class="text-white text-2xl font-bold">Gita Sloka Generator</a>
+            <nav class="hidden md:flex space-x-4">
+                <a href="updated-index-html.html" class="text-white hover:text-gray-200">Home</a>
+                <a href="about.html" class="text-white hover:text-gray-200">About</a>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden">
+                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav id="mobileMenu" class="hidden md:hidden bg-sky-700 p-4">
+        <a href="updated-index-html.html" class="block text-white hover:text-gray-200 py-2">Home</a>
+        <a href="about.html" class="block text-white hover:text-gray-200 py-2">About</a>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-sky-800 text-center mb-6">Gita Sloka Generator</h1>
+        
+        <div class="mb-6">
+            <label for="chapterSelect" class="block mb-2 font-semibold">Select a Chapter:</label>
+            <select id="chapterSelect" class="w-full p-2 border border-sky-300 rounded">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-sm mb-6">
+            <div id="sloka" class="text-lg prose max-w-none"></div>
+        </div>
+
+        <div class="flex justify-center space-x-4 mb-6">
+            <button id="previousBtn" class="px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700">Previous</button>
+            <button id="generateBtn" class="px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700">Generate Sloka</button>
+            <button id="randomBtn" class="px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700">Random Verse</button>
+            <button id="nextBtn" class="px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700">Next</button>
+        </div>
+
+        <div class="mb-6">
+            <input id="searchInput" type="text" placeholder="Search slokas..." class="w-full p-2 border border-sky-300 rounded">
+            <button id="searchBtn" class="mt-2 px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700">Search</button>
+        </div>
+    </main>
+
+    <footer class="bg-sky-800 text-white p-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 Gita Sloka Generator</p>
+            <p>Email: contact@gitaslokagenerator.com</p>
+            <div class="mt-4 md:mt-0">
+                <a href="https://github.com/atinsharma24" class="text-white hover:text-gray-300 mr-4">GitHub</a>
+                <a href="https://www.instagram.com/atinsharma24" class="text-white hover:text-gray-300">Instagram</a>
+            </div>
+        </div>
+        <p>hello test</p>
+    </footer>
+
+    <script src="updated-script-jsN.js" type="module"></script>
+</body>
+</html>

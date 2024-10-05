@@ -1,0 +1,19 @@
+{
+  "name": "gita_generator",
+  "version": "1.0.0",
+  "description": "Welcome to the Gita Sloka Generator,  an interactive web application designed to explore the profound spiritual wisdom of the Bhagavad Gita – an ancient Indian scripture.  The Bhagavad Gita is presented as a conversation between Prince Arjuna and Lord Krishna, who serves as his charioteer.  This dialogue takes place on the battlefield of Kurukshetra, just before a great war between two factions of the same royal family, the Pandavas, and the Kauravas. The Gita addresses timeless philosophical questions, offering guidance on duty, righteousness, self-realization, devotion, knowledge, and selfless action.",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express-http-proxy": "^2.1.1"
+  }
+}

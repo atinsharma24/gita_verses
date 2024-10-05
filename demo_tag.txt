@@ -1,0 +1,45 @@
+<article class="article">
+                <h1 class="headingBg" itemprop="name">Bhagavad Gita: Chapter 2, Verse 69</h1>
+
+
+
+
+                <div itemprop="articleBody">
+
+                    <div class="verseMain">
+                        <div lang="sa" id="originalVerse">
+                            <p>या निशा सर्वभूतानां तस्यां जागर्ति संयमी |<br>यस्यां जाग्रति भूतानि सा निशा पश्यतो मुने: || 69||</p>
+                        </div>
+                        <div id="transliteration">
+                            <p>yā niśhā sarva-bhūtānāṁ tasyāṁ jāgarti sanyamī<br>yasyāṁ jāgrati bhūtāni sā niśhā paśhyato muneḥ</p>
+                        </div>
+
+                        <div id="verseAudio" align="center">
+                            <audio controls="" controlslist="nodownload" src="/public/audio/002_069.mp3">
+                                Your browser does not support the HTML5 Audio element.
+                            </audio>
+                        </div>
+
+                        <div id="wordMeanings">
+                            <a class="word" href="/w/ya">yā</a>—<span class="meaning">which</span>; <a class="word" href="/w/nisha">niśhā</a>—<span class="meaning">night</span>; <a class="word" href="/w/sarva-bhutanam">sarva-bhūtānām</a>—<span class="meaning">of all living beings</span>; <a class="word" href="/w/tasyam">tasyām</a>—<span class="meaning">in that</span>; <a class="word" href="/w/jagarti">jāgarti</a>—<span class="meaning">awake</span>; <a class="word" href="/w/sanyami">sanyamī</a>—<span class="meaning">self-controlled</span>; <a class="word" href="/w/yasyam">yasyām</a>—<span class="meaning">in which</span>; <a class="word" href="/w/jagrati">jāgrati</a>—<span class="meaning">awake</span>; <a class="word" href="/w/bhutani">bhūtāni</a>—<span class="meaning">creatures</span>; <a class="word" href="/w/sa">sā</a>—<span class="meaning">that</span>; <a class="word" href="/w/nisha">niśhā</a>—<span class="meaning">night</span>; <a class="word" href="/w/pashyatah">paśhyataḥ</a>—<span class="meaning">see</span>; <a class="word" href="/w/muneh">muneḥ</a>—<span class="meaning">sage</span>
+                        </div>
+
+                        <div id="transliteration_wo_dia" align="center">
+                            <p>ya nisha sarva-bhutanam tasyam jagarti sanyami<br>yasyam jagrati bhutani sa nisha pashyato muneh</p>
+                        </div>
+
+                    </div>
+
+                    <h2 class="headingBg2">Translation</h2>
+                    <div id="translation">
+                        <p>
+                            <span class="verseShort"><u>BG 2.69</u>:</span>
+                            What all beings consider as day is the night of ignorance for the wise, and what all creatures see as night is the day for the introspective sage.
+                        </p>
+                    </div>
+                        <h2 class="headingBg2">Commentary</h2>
+                        <div id="commentary">
+                            <p>Shree Krishna has used day and night figuratively here. People often confuse the meaning of this verse by taking the words literally. There was once a Khade Shree Baba (the standing ascetic), whose disciples claimed he was a very big sage. He had not slept in thirty-five years. He would stand in his room, resting on a hanging rope under his armpits. He used the rope to help him remain in the standing position. On being asked what his motivation was for this destructive kind of austerity, he would quote this verse of the <em>Bhagavad Gita</em>: “What all beings see as night, the enlightened sage sees as day.” So to practice it, he had given up sleeping at night. What a misunderstanding of the verse! From all that standing, his feet and lower legs were swollen, and so he could practically do nothing except stand.</p><p>Let us try and understand the true meaning of Shree Krishna’s words. Those who are in mundane consciousness look to material enjoyment as the real purpose of life. They consider the opportunity for worldly pleasures as the success of life, or “day,” and deprivation from sense pleasures as darkness, or “night.” On the other hand, those who have become wise with divine knowledge, see sense enjoyment as harmful for the soul, and hence view it as “night.” They consider refraining from the objects of the senses as elevating to the soul, and hence look on it as “day.” Using those connotations of the words, Shree Krishna states that what is night for the sage is day for the worldly-minded people, and vice versa.</p>
+                        </div>
+                </div>
+            </article>

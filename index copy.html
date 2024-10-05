@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gita Sloka Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="slokas.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <style>
+
+      .font-ambit {
+          font-family: Ambit,sans-serif;
+      }
+      
+      body {
+        font-family: 'ambit', sans-serif;
+      }
+      
+      </style>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+      
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+      
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-500 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl">Gita Sloka Generator</h1>
+            <!-- Mobile menu button -->
+            <button id="menuBtn" class="text-white lg:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="hidden lg:flex space-x-4">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-blue-500 text-white">
+        <a href="#home" class="block p-2 hover:bg-blue-600">Home</a>
+        <a href="#about" class="block p-2 hover:bg-blue-600">About</a>
+        <a href="#contact" class="block p-2 hover:bg-blue-600">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-5">
+        <h2 id="home" class="text-2xl">Welcome to the Gita Sloka Generator</h2>
+        
+        <section class="mt-4">
+            <h3 class="text-xl">Features</h3>
+            <ul class="list-disc pl-5">
+                <li>Chapter Selection: Choose a chapter from a user-friendly dropdown menu.</li>
+                <li>Sloka Display: Read the verses (slokas) one by one from the selected chapter.</li>
+                <li>Navigation: Move to the next or previous sloka, or generate a random sloka.</li>
+            </ul>
+        </section>
+        
+        <section class="mt-4">
+            <h3 class="text-xl">About</h3>
+            <p>
+                The Gita Sloka Generator project aims to make the profound teachings of the Bhagavad Gita easily accessible to people from diverse backgrounds. 
+                By offering chapter-wise sloka reading and a user-friendly interface, we hope to promote the understanding and appreciation of this timeless spiritual scripture.
+            </p>
+            <p>
+                Whether you are seeking spiritual insights, philosophical guidance, or simply interested in exploring ancient wisdom, the Gita Sloka Generator provides a valuable resource for your spiritual journey. 
+                Delve into the wisdom of the Gita, reflect on its teachings, and find inspiration for leading a purposeful and meaningful life. Enjoy your exploration of the Bhagavad Gita!
+            </p>
+        </section>
+        
+        <section id="sloka-section" class="mt-5">
+            <h3 class="text-xl">Select a Chapter</h3>
+            <select id="chapterSelect" class="mt-2 p-2 border rounded">
+                <option value="" disabled selected>Select a Chapter</option>
+                <option value="1">Chapter 1</option>
+                <option value="2">Chapter 2</option>
+                <!-- Add more chapters as needed -->
+            </select>
+            <button id="displaySloka" class="ml-2 p-2 bg-blue-500 text-white rounded">Display Slokas</button>
+            <button id="prevSloka" class="ml-2 p-2 bg-blue-500 text-white rounded">Previous Sloka</button>
+            <button id="nextSloka" class="ml-2 p-2 bg-blue-500 text-white rounded">Next Sloka</button>
+            <button id="randomSloka" class="ml-2 p-2 bg-blue-500 text-white rounded">Random Sloka</button>
+            <div id="slokaDisplay" class="mt-4 border p-4 rounded bg-white"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white p-4 mt-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <p>&copy; 2024 Gita Sloka Generator</p>
+                <a href="mailto:atinsharma24@gmail.com">atinsharma24@gmail.com</a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/atin-sharma-27a2b0203" target="_blank" class="text-white hover:text-gray-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="text-white hover:text-gray-300 ml-4">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" class="text-white hover:text-gray-300 ml-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden'); // Toggle visibility
+        });
+
+        // Slokas functionality
+        const slokasData = {
+            1: ["Sloka 1.1", "Sloka 1.2", "Sloka 1.3"],
+            2: ["Sloka 2.1", "Sloka 2.2", "Sloka 2.3"],
+            // Add more chapters and slokas as needed
+        };
+
+        let currentChapter = null;
+        let currentSlokaIndex = 0;
+
+        document.getElementById('chapterSelect').addEventListener('change', function() {
+            currentChapter = this.value;
+            currentSlokaIndex = 0; // Reset to first sloka
+            displaySloka();
+        });
+
+        document.getElementById('displaySloka').addEventListener('click', displaySloka);
+        document.getElementById('prevSloka').addEventListener('click', showPreviousSloka);
+        document.getElementById('nextSloka').addEventListener('click', showNextSloka);
+        document.getElementById('randomSloka').addEventListener('click', showRandomSloka);
+
+        function displaySloka() {
+            if (currentChapter !== null && slokasData[currentChapter]) {
+                const sloka = slokasData[currentChapter][currentSlokaIndex];
+                document.getElementById('slokaDisplay').innerText = sloka || "No more slokas in this chapter.";
+            } else {
+                document.getElementById('slokaDisplay').innerText = "Please select a chapter.";
+            }
+        }
+
+        function showPreviousSloka() {
+            if (currentSlokaIndex > 0) {
+                currentSlokaIndex--;
+                displaySloka();
+            }
+        }
+
+        function showNextSloka() {
+            if (currentChapter && currentSlokaIndex < slokasData[currentChapter].length - 1) {
+                currentSlokaIndex++;
+                displaySloka();
+            }
+        }
+
+        function showRandomSloka() {
+            if (currentChapter) {
+                currentSlokaIndex = Math.floor(Math.random() * slokasData[currentChapter].length);
+                displaySloka();
+            }
+        }
+    </script>
+
+</body>
+</html>

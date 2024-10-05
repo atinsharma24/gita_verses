@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Gita Sloka Generator</title>
+  <style>
+    .font-ambit {
+      font-family: Ambit, sans-serif;
+    }
+
+    body {
+      font-family: 'ambit', sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+
+</head>
+
+<body>
+
+  <!-- Collapsible Navigation Bar -->
+  <nav class="font-ambit bg-yellow-600 p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a class="text-white text-2xl font-bold" href="index.html">Gita Sloka Generator</a>
+
+      <!-- Hamburger Menu for smaller screens -->
+      <div class="font-ambit flex md:hidden">
+        <button id="menuBtn" class="text-white hover:text-gray-200 focus:outline-none">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links for larger screens -->
+      <div class="font-ambit hidden md:flex space-x-4">
+        <a class="text-white hover:text-gray-200" href="index.html">Home</a>
+        <a class="text-white hover:text-gray-200" href="about.html">About</a>
+      </div>
+    </div>
+
+    <!-- Collapsible menu for smaller screens -->
+    <div class="font-ambit hidden md:hidden mt-4 transition-all duration-300" id="mobileMenu">
+      <a class="block text-white hover:text-gray-200 py-2" href="index.html">Home</a>
+      <a class="block text-white hover:text-gray-200 py-2" href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!---------------------------------------------------------------->
+
+  <!-- Main content section -->
+  <div class="font-ambit container mx-auto px-4 py-8 md:w-3/4 ">
+    <h1
+      class="mb-6 mt-6 md:mt-12 mx-auto rounded-lg p-1 text-3xl sm:static sm:mb-0 sm:pt-0 sm:text-3xl font-bold text-yellow-800 text-center sm:w-1/2">
+      About</h1>
+    <p class="mb-6 mt-6 mr-4 rounded-lg p-2 text-lg text-justify font-light text-gray-800 ">
+      The Gita Sloka Generator project aims to make the profound teachings of the Bhagavad Gita easily accessible to
+      people from diverse backgrounds. By offering chapter-wise sloka reading and a user-friendly interface, we hope to
+      promote the understanding and appreciation of this timeless spiritual scripture.
+    </p>
+
+    <p class=" mb-6 mt-6 mr-4 rounded-lg p-2 text-lg text-justify font-light text-gray-800 ">
+      Whether you are seeking spiritual insights, philosophical guidance, or simply interested in exploring ancient
+      wisdom, the Gita Sloka Generator provides a valuable resource for your spiritual journey. Delve into the wisdom of
+      the Gita, reflect on its teachings, and find inspiration for leading a purposeful and meaningful life. Enjoy your
+      exploration of the Bhagavad Gita!
+    </p>
+
+    <h1
+      class="mb-6 mt-6 md:mt-12 mx-auto rounded-lg p-1 text-3xl sm:static sm:mb-0 sm:pt-0 sm:text-3xl font-bold text-yellow-800 text-center sm:w-1/2">
+      Features</h1>
+    <ul
+      class="mb-6 mt-6 mr-4 rounded-lg p-2 text-lg text-justify font-light text-gray-800  mr-4 ml-4  list-disc list-inside mb-8 text-justify">
+      <li class="mt-4 mb-4"><b>Chapter Selection:</b> You can choose a specific chapter from the Bhagavad Gita using a
+        user-friendly dropdown menu. The selected chapter will be displayed alongside its title.</li>
+      <li class="mt-4 mb-4"><b>Sloka Display:</b> After selecting a chapter, you can read the verses (slokas) from that
+        particular chapter. The slokas are displayed one by one, enabling you to dive into the profound teachings of
+        each section.</li>
+      <li class="mt-4 mb-2"><b>Navigation:</b> The application provides navigation buttons for easy browsing between
+        slokas. You can move to the next sloka, the previous one, or even generate a random sloka for a serendipitous
+        reading experience.</li>
+    </ul>
+
+    <h1
+      class="mb-6 mt-6 md:mt-12 mx-auto rounded-lg p-1 text-3xl sm:static sm:mb-0 sm:pt-0 sm:text-3xl font-bold text-yellow-800 text-center sm:w-1/2">
+      Tech Stack</h1>
+    <ul
+      class="mb-6 mt-6 mr-4 rounded-lg p-2 text-lg text-justify font-light text-gray-800  mr-4 ml-4 list-disc list-inside mb-8 text-justify">
+      <li class="mt-4 mb-4"><b>HTML:</b> The project's structure and content are created using Hypertext Markup Language
+        (HTML).</li>
+      <li><b>CSS (Tailwind CSS):</b> To enhance the visual appeal and responsiveness of the application, we utilized
+        Tailwind CSS, a popular utility-first CSS framework.</li>
+      <li class="mt-4 mb-4"><b>JavaScript:</b> The interactive functionality of the Gita Sloka Generator is powered by
+        JavaScript. It enables the dynamic selection and display of slokas based on user interactions.</li>
+      <li class="mt-4 mb-4"><b>Web Hosting:</b> The web application is hosted on a web server, making it accessible to
+        users across the internet.</li>
+    </ul>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="font-ambit bg-yellow-900 text-white md:p-8 p-4 pt-4">
+    <div class=" container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <!-- Left section of the footer -->
+      <div class="mb-4 md:mb-0">
+        <p class="md:text-lg text-xl">© <b>Gita Sloka Generator</b></p>
+      </div>
+
+      <!-- Middle section of the footer -->
+      <div class="mb-4 md:mb-0">
+        <a class="font-light" href="mailto:atinsharma24@gmail.com">Email: atinsharma24@gmail.com</p>
+      </div>
+
+      <!-- Right section of the footer -->
+      <div class="text-center">
+        <p class="text-center font-semibold text-xl mt-2 mb-2">Follow Us</p>
+        <div class="flex space-x-4 justify-center items-center mt-4">
+
+          <a class="text-white hover:text-gray-300" href="https://github.com/atinsharma24">
+            <i class="fab fa-github text-3xl w-10"></i>
+          </a>
+          <a class="text-white hover:text-gray-300" href="https://www.instagram.com/atinsharma24">
+            <i class="fab fa-instagram text-3xl w-10"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+    crossorigin="anonymous"></script>
+  <script>
+
+    // JavaScript to handle the mobile navigation toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

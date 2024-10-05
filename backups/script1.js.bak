@@ -1,0 +1,116 @@
+import slokas from './slokas.js';
+
+let currentSlokaIndex = -1; // Initialize the index to -1 to indicate no sloka displayed yet
+
+function generateSloka() {
+  const chapterSelect = document.getElementById("chapterSelect");
+  const selectedChapter = parseInt(chapterSelect.value);
+  let filteredSlokas = slokas;
+
+  if (selectedChapter !== 0) {
+    filteredSlokas = slokas.filter(sloka => sloka.startsWith(`BG ${selectedChapter}.`));
+  }
+
+  const slokaElement = document.getElementById("sloka");
+  
+  if (filteredSlokas.length === 0) {
+    slokaElement.innerText = "No slokas found for the selected chapter.";
+  } else {
+    currentSlokaIndex = Math.floor(Math.random() * filteredSlokas.length);
+    slokaElement.innerText = filteredSlokas[currentSlokaIndex];
+  }
+}
+
+function nextSloka() {
+  const chapterSelect = document.getElementById("chapterSelect");
+  const selectedChapter = parseInt(chapterSelect.value);
+  let filteredSlokas = slokas;
+
+  if (selectedChapter !== 0) {
+    filteredSlokas = slokas.filter(sloka => sloka.startsWith(`BG ${selectedChapter}.`));
+  }
+
+  const slokaElement = document.getElementById("sloka");
+
+  if (filteredSlokas.length === 0) {
+    slokaElement.innerText = "No slokas found for the selected chapter.";
+  } else {
+    currentSlokaIndex++;
+    if (currentSlokaIndex >= filteredSlokas.length) {
+      currentSlokaIndex = 0;
+    }
+    slokaElement.innerText = filteredSlokas[currentSlokaIndex];
+  }
+}
+
+function previousSloka() {
+  const chapterSelect = document.getElementById("chapterSelect");
+  const selectedChapter = parseInt(chapterSelect.value);
+  let filteredSlokas = slokas;
+
+  if (selectedChapter !== 0) {
+    filteredSlokas = slokas.filter(sloka => sloka.startsWith(`BG ${selectedChapter}.`));
+  }
+
+  const slokaElement = document.getElementById("sloka");
+
+  if (filteredSlokas.length === 0) {
+    slokaElement.innerText = "No slokas found for the selected chapter.";
+  } else {
+    currentSlokaIndex--;
+    if (currentSlokaIndex < 0) {
+      currentSlokaIndex = filteredSlokas.length - 1;
+    }
+    slokaElement.innerText = filteredSlokas[currentSlokaIndex];
+  }
+}
+
+
+function searchSloka() {
+  const searchInput = document.getElementById("searchInput").value;
+  const [chapter, verse] = searchInput.split(".");
+
+  if (chapter && verse) {
+    const formattedChapter = parseInt(chapter);
+    const formattedVerse = parseInt(verse);
+
+    const filteredSlokas = slokas.filter((sloka) => {
+      const [slokaChapter, slokaVerse] = sloka.match(/\d+/g).map(Number);
+      return slokaChapter === formattedChapter && slokaVerse === formattedVerse;
+    });
+
+    const slokaElement = document.getElementById("sloka2");
+
+    if (filteredSlokas.length === 0) {
+      slokaElement.innerHTML = `<p class="text-red-600">No slokas found for the specified chapter and verse.</p>`;
+    } else {
+      const slokaText = filteredSlokas[0];
+      const formattedSloka = `<p class="text-lg font-semibold italic text-gray-700">Chapter ${chapter} | Verse ${verse}:</p> ${slokaText}`;
+      slokaElement.innerHTML = formattedSloka;
+    }
+    
+    // Clear the search input after displaying the sloka
+    document.getElementById("searchInput").value = "";
+  } else {
+    alert("Invalid input format. Please enter the chapter and verse in the format '12.1' or '10.23'.");
+  }
+}
+
+document.getElementById("generateBtn").addEventListener("click", generateSloka);
+document.getElementById("nextBtn").addEventListener("click", nextSloka);
+document.getElementById("previousBtn").addEventListener("click", previousSloka);
+document.getElementById("searchBtn").addEventListener("click", searchSloka);
+
+//_______________________________________________________________________________________________________________________________________
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", function () {
+  mobileMenu.classList.toggle("hidden");
+  });
+});
+
+// generateSloka(); // Generate the initial sloka on page load
+
