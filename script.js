@@ -1,4 +1,4 @@
-// slokas.js would still contain the slokas as fallback data
+//  fallback 
 import slokas from "./slokas.js";
 
 let currentSlokaIndex = -1; // Initialize index to -1 to indicate no sloka displayed yet
