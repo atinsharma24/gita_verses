@@ -1,180 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<title>Gita Sloka Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Gita Sloka Generator</title>
+  
+  <style>
 
-	<style>
-		.font-ambit {
-			font-family: Ambit, sans-serif;
-		}
+.font-ambit {
+    font-family: Ambit,sans-serif;
+}
 
-		body {
-			font-family: 'ambit', sans-serif;
-		}
-	</style>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+body {
+  font-family: 'ambit', sans-serif;
+}
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 
-	<script src="slokas.js" defer></script>
-	<script src="updated-script-jsN copyN.js" defer></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+  <script src="slokas.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
-
+</head>
 <body>
 
-	<!-- Collapsible Navigation Bar -->
-	<nav class="bg-purple-600 p-4">
-		<div class="container mx-auto flex items-center justify-between">
-			<!-- Logo -->
-			<a class="text-white text-2xl font-bold" href="index.html">Gita Sloka Generator</a>
+  <!-- Collapsible Navigation Bar -->
+  <nav class="bg-yellow-600 p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a class="text-white text-2xl font-bold" href="index.html">Gita Sloka Generator</a>
 
-			<!-- Hamburger Menu for smaller screens -->
-			<div class="flex md:hidden">
-				<button id="menuBtn" class="text-white hover:text-gray-200 focus:outline-none">
-					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-							d="M4 6h16M4 12h16m-7 6h7"></path>
-					</svg>
-				</button>
-			</div>
-
-
-			<!-- Navigation Links for larger screens -->
-			<div class="hidden md:flex space-x-4">
-				<a class="text-white hover:text-gray-200" href="index.html">Home</a>
-				<a class="text-white hover:text-gray-200" href="about.html">About</a>
-			</div>
-		</div>
-
-		<!-- Collapsible menu for smaller screens -->
-		<div class="hidden md:hidden mt-4 transition-all duration-300" id="mobileMenu">
-			<a class="block text-white hover:text-gray-200 py-2" href="index.html">Home</a>
-			<a class="block text-white hover:text-gray-200 py-2" href="about.html">About</a>
-		</div>
-	</nav>
-
-	<!---------------------------------------------------------------->
+      <!-- Hamburger Menu for smaller screens -->
+      <div class="flex md:hidden">
+        <button id="menuBtn" class="text-white hover:text-gray-200 focus:outline-none">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
 
 
-	<div class="bg-white">
-		<div class="text-center sm:text-left container mx-auto flex flex-col items-center justify-center px-4 py-8 ">
-			<h1
-				class="font-ambit mb-6 mt-6 md:mt-12 mr-4 rounded-lg p-1 text-3xl sm:static sm:mb-0 sm:pt-0 sm:text-3xl font-bold text-yellow-800 text-center sm:w-1/2">
-				Gita Sloka Generator</h1>
+      <!-- Navigation Links for larger screens -->
+      <div class="hidden md:flex space-x-4">
+        <a class="text-white hover:text-gray-200" href="index.html">Home</a>
+        <a class="text-white hover:text-gray-200" href="about.html">About</a>
+      </div>
+    </div>
 
-			<h2
-				class="font-ambit text-bold mb-6 mt-6 mr-4 rounded-lg p-2 text-xl text-justify font-light text-gray-800">
-				<span class="font-normal">The Gita</span> is presented as a conversation between
-				<span class="font-normal"> Prince Arjuna</span> and
-				<span class="font-normal">Lord Krishna</span>, who serves as his charioteer. The dialogue takes place on
-				the battlefield of Kurukshetra, just before the start of a great war.
-			</h2>
-			<h2 class="font-ambit mb-6 mr-4 rounded-lg p-2 text-xl text-justify font-light text-gray-800">The teachings
-				of the Gita cover a wide range of topics, including duty
-				<span class="font-normal"> (dharma) </span> ,
-				righteousness, the nature of the self
-				<span class="font-normal"> (atman)</span>, the paths of devotion
-				<span class="font-normal"> (bhakti)</span>, knowledge
-				<span class="font-normal"> (jnana)</span>, and selfless action
-				<span class="font-normal"> (karma)</span>.
-			</h2>
-			<div class="font-ambit rounded-lg p-6 shadow-sm md:w-3/4 bg-yellow-50">
-				<label for="chapterSelect" class="mb-4 mr-4 pb-4 text-lg font-semibold">Select a Chapter:</label>
-				<select id="chapterSelect" class="mb-4 mr-4 w-full rounded-lg bg-gray-100 p-2">
-					<option value="0">All Chapters</option>
-					<option value="1">1. Arjuna Vishada Yoga</option>
-					<option value="2">2. Sankhya Yoga</option>
-					<option value="3">3. Karma Yoga</option>
-					<option value="4">4. Gnana-Karma-Sanyasa Yoga</option>
-					<option value="5">5. Karma-Sanyasa Yoga</option>
-					<option value="6">6. Atma-Samyama Yoga</option>
-					<option value="7">7. Gnana-Vignana Yoga</option>
-					<option value="8">8. Aksara-ParaBrahma Yoga</option>
-					<option value="9">9. Raja-Vidya-Raja-Guhya Yoga</option>
-					<option value="10">10. Vibhuti Yoga</option>
-					<option value="11">11. Vishwarupa-Darsana Yoga</option>
-					<option value="12">12. Bhakti Yoga</option>
-					<option value="13">13. Ksetra-Ksetrajna-Vibhaga Yoga</option>
-					<option value="14">14. Gunatraya-Vibhaga Yoga</option>
-					<option value="15">15. Purushottama Yoga</option>
-					<option value="16">16. Daivasura-Sampad-Vibhaga Yoga</option>
-					<option value="17">17. Shraddhatraya-Vibhaga Yoga</option>
-					<option value="18">18. Moksha-Sanyasa Yoga</option>
-				</select>
-				<p id="sloka" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
-					<!-- Sloka text will be dynamically inserted here -->
-				</p>
-				<div class="flex flex-row items-center justify-center">
+    <!-- Collapsible menu for smaller screens -->
+    <div class="hidden md:hidden mt-4 transition-all duration-300" id="mobileMenu">
+      <a class="block text-white hover:text-gray-200 py-2" href="index.html">Home</a>
+      <a class="block text-white hover:text-gray-200 py-2" href="about.html">About</a>
+    </div>
+  </nav>
 
-					<button id="previousBtn"
-						class="font-ambit  m-2 rounded-lg bg-blue-600 hover:bg-blue-700  px-2 py-1 md:px-6 md:py-3 text-white">
-						Prev
-					</button>
+  <!---------------------------------------------------------------->
 
-					<button id="generateBtn"
-						class="font-ambit m-2 rounded-lg bg-yellow-600 hover:bg-yellow-700  px-2 py-1 md:px-6 md:py-3 text-white">
-						Random
-					</button>
 
-					<button id="nextBtn"
-						class="font-ambit m-2 rounded-lg bg-green-600 hover:bg-green-700  px-2 py-1 md:px-6 md:py-3 text-white">
-						Start | Next
-					</button>
+  <div class="bg-white">
+    <div class="text-center sm:text-left container mx-auto flex flex-col items-center justify-center px-4 py-8 ">
+      <h1 class="font-ambit mb-6 mt-6 md:mt-12 mr-4 rounded-lg p-1 text-3xl sm:static sm:mb-0 sm:pt-0 sm:text-3xl font-bold text-yellow-800 text-center sm:w-1/2">Gita Sloka Generator</h1>
 
-				</div>
-			</div>
-			<!-- Search Box Div -->
-			<div
-				class="flex flex-row justify-center items-center font-ambit  rounded-lg p-6 shadow-sm md:w-3/4 bg-yellow-50 mt-6 mb-6">
-				<label for="searchInput" class="font-ambit text-lg font-semibold mr-3">Search</label>
-				<input type="text" id="searchInput" class="font-ambit mb-4 mt-4 w-full rounded-lg bg-gray-100 p-2"
-					placeholder="Enter Chapter and Verse (e.g., 12.1 or 10.23)" />
-				<p id="sloka2" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
-					<!-- Sloka text will be dynamically inserted here -->
-				</p>
-				<button id="searchBtn"
-					class="font-ambit m-2 rounded-lg bg-red-600 hover:bg-red-800  px-2 py-1 md:px-6 md:py-3 text-white font-semibold">Search</button>
-			</div>
-		</div>
-	</div>
+      <h2 class="font-ambit text-bold mb-6 mt-6 mr-4 rounded-lg p-2 text-xl text-justify font-light text-gray-800">
+        <span class="font-normal">The Gita</span> is presented as a conversation between 
+        <span class="font-normal"> Prince Arjuna</span> and 
+        <span class="font-normal">Lord Krishna</span>, who serves as his charioteer. The dialogue takes place on the battlefield of Kurukshetra, just before the start of a great war.
+      </h2>
+      <h2 class="font-ambit mb-6 mr-4 rounded-lg p-2 text-xl text-justify font-light text-gray-800">The teachings of the Gita cover a wide range of topics, including duty 
+        <span class="font-normal"> (dharma) </span> , 
+        righteousness, the nature of the self 
+        <span class="font-normal">  (atman)</span>, the paths of devotion  
+        <span class="font-normal"> (bhakti)</span>, knowledge  
+        <span class="font-normal"> (jnana)</span>, and selfless action 
+        <span class="font-normal"> (karma)</span>.
+      </h2>     
+      <div class="font-ambit rounded-lg p-6 shadow-sm md:w-3/4 bg-yellow-50">
+        <label for="chapterSelect" class="mb-4 mr-4 pb-4 text-lg font-semibold">Select a Chapter:</label>
+        <select id="chapterSelect" class="mb-4 mr-4 w-full rounded-lg bg-gray-100 p-2">
+          <option value="0">All Chapters</option>
+          <option value="1">1. Arjuna Vishada Yoga</option>
+          <option value="2">2. Sankhya Yoga</option>
+          <option value="3">3. Karma Yoga</option>
+          <option value="4">4. Gnana-Karma-Sanyasa Yoga</option>
+          <option value="5">5. Karma-Sanyasa Yoga</option>
+          <option value="6">6. Atma-Samyama Yoga</option>
+          <option value="7">7. Gnana-Vignana Yoga</option>
+          <option value="8">8. Aksara-ParaBrahma Yoga</option>
+          <option value="9">9. Raja-Vidya-Raja-Guhya Yoga</option>
+          <option value="10">10. Vibhuti Yoga</option>
+          <option value="11">11. Vishwarupa-Darsana Yoga</option>
+          <option value="12">12. Bhakti Yoga</option>
+          <option value="13">13. Ksetra-Ksetrajna-Vibhaga Yoga</option>
+          <option value="14">14. Gunatraya-Vibhaga Yoga</option>
+          <option value="15">15. Purushottama Yoga</option>
+          <option value="16">16. Daivasura-Sampad-Vibhaga Yoga</option>
+          <option value="17">17. Shraddhatraya-Vibhaga Yoga</option>
+          <option value="18">18. Moksha-Sanyasa Yoga</option>
+        </select>
+        <p id="sloka" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
+          <!-- Sloka text will be dynamically inserted here -->
+        </p>
+        <div class="flex flex-row items-center justify-center">
 
-	<!-- Footer -->
-	<footer id="footer" class="font-ambit bg-purple-900 text-white md:p-8 p-4 pt-4">
-		<div class="font-ambit container mx-auto flex flex-col md:flex-row items-center justify-between">
-			<!-- Left section of the footer -->
-			<div class="font-ambit mb-4 md:mb-0">
-				<p class="md:text-xl text-2xl">© <b>Random Gita Sloka Generator</b></p>
-			</div>
+        <button id="previousBtn" class="font-ambit  m-2 rounded-lg bg-blue-600 hover:bg-blue-700  px-2 py-1 md:px-6 md:py-3 text-white">
+          Prev
+        </button>
+        
+        <button
+            id="generateBtn"
+            class="font-ambit m-2 rounded-lg bg-yellow-600 hover:bg-yellow-700  px-2 py-1 md:px-6 md:py-3 text-white">
+            Random
+        </button>
 
-			<!-- Middle section of the footer -->
-			<div class="mb-4 md:mb-0">
-				<a class="font-ambit font-light" href="mailto:atinsharma24@gmail.com">Email: atinsharma24@gmail.com</p>
-			</div>
+        <button id="nextBtn" class="font-ambit m-2 rounded-lg bg-green-600 hover:bg-green-700  px-2 py-1 md:px-6 md:py-3 text-white">
+            Start | Next
+        </button>
+        
+         </div>
+       </div>
+      <!-- Search Box Div -->
+      <div class="flex flex-row justify-center items-center font-ambit  rounded-lg p-6 shadow-sm md:w-3/4 bg-yellow-50 mt-6 mb-6">
+        <label for="searchInput" class="font-ambit text-lg font-semibold mr-3">Search</label>
+        <input type="text" id="searchInput" class="font-ambit mb-4 mt-4 w-full rounded-lg bg-gray-100 p-2" placeholder="Enter Chapter and Verse (e.g., 12.1 or 10.23)"/> 
+        <p id="sloka2" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
+          <!-- Sloka text will be dynamically inserted here -->
+        </p>
+        <button id="searchBtn"class="font-ambit m-2 rounded-lg bg-red-600 hover:bg-red-800  px-2 py-1 md:px-6 md:py-3 text-white font-semibold">Search</button>
+      </div>
+    </div>
+  </div>
 
-			<!-- Right section of the footer -->
-			<div class="text-center">
-				<p class="text-center font-semibold text-xl mt-2 mb-2">Follow Me</p>
-				<div class="flex space-x-4 justify-center items-center mt-4">
+  <!-- Footer -->
+  <footer id="footer" class="font-ambit bg-yellow-900 text-white md:p-8 p-4 pt-4">
+    <div class="font-ambit container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <!-- Left section of the footer -->
+      <div class="font-ambit mb-4 md:mb-0">
+        <p class="md:text-xl text-2xl">© <b>Random Gita Sloka Generator</b></p>
+      </div>
 
-					<a class="text-white hover:text-gray-300" href="https://github.com/atinsharma24">
-						<i class="fab fa-github text-3xl w-10"></i>
-					</a>
-					<a class="text-white hover:text-gray-300" href="https://www.instagram.com/atinsharma24">
-						<i class="fab fa-instagram text-3xl w-10"></i>
-					</a>
-				</div>
-			</div>
+      <!-- Middle section of the footer -->
+      <div class="mb-4 md:mb-0">
+        <a class="font-ambit font-light" href="mailto:atinsharma24@gmail.com">Email: atinsharma24@gmail.com</p>
+      </div>
 
-		</div>
-	</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
-		crossorigin="anonymous"></script>
-	<!-- <script src="slokas.js" type="module"></script>
-  <script src=".js" type="module"></script> -->
+      <!-- Right section of the footer -->
+      <div class="text-center">
+        <p class="text-center font-semibold text-xl mt-2 mb-2">Follow Me</p>
+        <div class="flex space-x-4 justify-center items-center mt-4">
+          
+          <a class="text-white hover:text-gray-300" href="https://github.com/atinsharma24">
+            <i class="fab fa-github text-3xl w-10"></i>
+          </a>
+          <a class="text-white hover:text-gray-300" href="https://www.instagram.com/atinsharma24">
+            <i class="fab fa-instagram text-3xl w-10"></i>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="slokas.js" type="module"></script>
+  <script src="script.js" type="module"></script>
 </body>
-
 </html>
