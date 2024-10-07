@@ -18,7 +18,6 @@
 	</style>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 	<script src="slokas.js" defer></script>
 	<script src="updated-script-jsN copyNN.js" defer></script>
@@ -26,13 +25,10 @@
 
 <body>
 
-	<!-- Collapsible Navigation Bar -->
 	<nav class="bg-purple-600 p-4">
 		<div class="container mx-auto flex items-center justify-between">
-			<!-- Logo -->
 			<a class="text-white text-2xl font-bold" href="index.html">Gita Verse Fetch</a>
 
-			<!-- Hamburger Menu for smaller screens -->
 			<div class="flex md:hidden">
 				<button id="menuBtn" class="text-white hover:text-gray-200 focus:outline-none">
 					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,21 +39,18 @@
 			</div>
 
 
-			<!-- Navigation Links for larger screens -->
 			<div class="hidden md:flex space-x-4">
 				<a class="text-white hover:text-gray-200" href="index.html">Home</a>
 				<a class="text-white hover:text-gray-200" href="about.html">About</a>
 			</div>
 		</div>
 
-		<!-- Collapsible menu for smaller screens -->
 		<div class="hidden md:hidden mt-4 transition-all duration-300" id="mobileMenu">
 			<a class="block text-white hover:text-gray-200 py-2" href="index.html">Home</a>
 			<a class="block text-white hover:text-gray-200 py-2" href="about.html">About</a>
 		</div>
 	</nav>
 
-	<!---------------------------------------------------------------->
 
 
 	<div class="bg-white">
@@ -106,7 +99,6 @@
 					<option value="18">18. Moksha-Sanyasa Yoga</option>
 				</select>
 				<p id="sloka" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
-					<!-- Sloka text will be dynamically inserted here -->
 				</p>
 				<div class="flex flex-row items-center justify-center">
 
@@ -127,14 +119,12 @@
 
 				</div>
 			</div>
-			<!-- Search Box Div -->
 			<div
 				class="flex flex-row justify-center items-center font-ambit  rounded-lg p-6 shadow-sm md:w-3/4 bg-yellow-50 mt-6 mb-6">
 				<label for="searchInput" class="font-ambit text-lg font-semibold mr-3">Search</label>
 				<input type="text" id="searchInput" class="font-ambit mb-4 mt-4 w-full rounded-lg bg-gray-100 p-2"
 					placeholder="Enter Chapter and Verse (e.g., 12.1 or 10.23)" />
 				<p id="sloka2" class="font-ambit mb-4 mt-4 text-justify text-lg font-semibold italic text-gray-800">
-					<!-- Sloka text will be dynamically inserted here -->
 				</p>
                 <div class="bg-white rounded-lg p-6 shadow-sm mb-6">
                     <div id="sloka" class="text-lg prose max-w-none"></div>
@@ -148,20 +138,16 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
 	<footer id="footer" class="font-ambit bg-purple-900 text-white md:p-8 p-4 pt-4">
 		<div class="font-ambit container mx-auto flex flex-col md:flex-row items-center justify-between">
-			<!-- Left section of the footer -->
 			<div class="font-ambit mb-4 md:mb-0">
 				<p class="md:text-xl text-2xl">© <b>Gita Verse Fetcher </b></p>
 			</div>
 
-			<!-- Middle section of the footer -->
 			<div class="mb-4 md:mb-0">
 				<a class="font-ambit font-light" href="mailto:atinsharma24@gmail.com">Email: atinsharma24@gmail.com</p>
 			</div>
 
-			<!-- Right section of the footer -->
 			<div class="text-center">
 				<p class="text-center font-semibold text-xl mt-2 mb-2">Follow Me</p>
 				<div class="flex space-x-4 justify-center items-center mt-4">
@@ -179,8 +165,6 @@
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
 		crossorigin="anonymous"></script>
-	<!-- <script src="slokas.js" type="module"></script>
-  <script src=".js" type="module"></script> -->
 </body>
 
 </html>
