@@ -2,13 +2,11 @@
 
 <!-- ![Gita Verse Fetcher](https://i.imgur.com/IXrOvog.jpg) -->
 
-<img src="https://i.imgur.com/IXrOvog.jpg" alt="Gita Verse Fetcher" style="max-width: 80%; height: auto;" />
-
-
+![Gita Verse Fetcher](https://wallpapercave.com/wp/wp11930720.jpg)
 
 <!-- [Imgur](https://i.imgur.com/IXrOvog.jpg) -->
 
-Welcome to the Gita Verse Fetcher, an interactive web application designed to explore the profound spiritual wisdom of the Bhagavad Gita – an ancient Indian scripture. The Bhagavad Gita is presented as a conversation between Prince Arjuna and Lord Krishna, who serves as his charioteer. This dialogue takes place on the battlefield of Kurukshetra, just before a great war between two factions of the same royal family, the Pandavas, and the Kauravas. The Gita addresses timeless philosophical questions, offering guidance on duty, righteousness, self-realization, devotion, knowledge, and selfless action.
+Welcome to the Gita Verse Fetcher, an interactive web application designed to explore the profound spiritual wisdom of the Bhagavad Gita – an ancient Indian scripture. Theccc Bhagavad Gita is presented as a conversation between Prince Arjuna and Lord Krishna, who serves as his charioteer. This dialogue takes place on the battlefield of Kurukshetra, just before a great war between two factions of the same royal family, the Pandavas, and the Kauravas. The Gita addresses timeless philosophical questions, offering guidance on duty, righteousness, self-realization, devotion, knowledge, and selfless action.
 
 ## Features
 
@@ -44,16 +42,17 @@ In the Gita Verse Fetcher, data fetching is a crucial component that allows user
 
 1. **Create a New React App**: Use Create React App to set up a new project.
 
-   ```bash
-   npx create-react-app gita-verse-fetcher
-   cd gita-verse-fetcher
-   ```
+```bash
+npx create-react-app gita-verse-fetcher
+
+cd gita-verse-fetcher
+```
 
 2. **Install Axios**: We use Axios, a promise-based HTTP client for the browser and Node.js, to fetch data.
 
-   ```bash
-   npm install axios
-   ```
+```bash
+npm install axios
+```
 
 ### Fetching Data
 
@@ -63,45 +62,86 @@ Here’s an example of how you can fetch verses from an API endpoint (assuming y
 
 ```javascript
 import React, { useState, useEffect } from 'react';
+
 import axios from 'axios';
 
+
+
 const VerseFetcher = () => {
-    const [chapter, setChapter] = useState(1);
-    const [verse, setVerse] = useState('');
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        fetchVerse(chapter);
-    }, [chapter]);
+const [chapter, setChapter] = useState(1);
 
-    const fetchVerse = async (chapter) => {
-        setLoading(true);
-        try {
-            const response = await axios.get(`https://api.example.com/gita/verses?chapter=${chapter}`);
-            setVerse(response.data.verse); // Assuming response structure has 'verse'
-        } catch (error) {
-            console.error("Error fetching the verse:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+const [verse, setVerse] = useState('');
 
-    const handleChapterChange = (e) => {
-        setChapter(e.target.value);
-    };
+const [loading, setLoading] = useState(true);
 
-    return (
-        <div>
-            <h1>Gita Verse Fetcher</h1>
-            <select onChange={handleChapterChange}>
-                <option value={1}>Chapter 1</option>
-                <option value={2}>Chapter 2</option>
-                {/* Add more options for other chapters */}
-            </select>
-            {loading ? <p>Loading...</p> : <p>{verse}</p>}
-        </div>
-    );
+
+
+useEffect(() => {
+
+fetchVerse(chapter);
+
+}, [chapter]);
+
+
+
+const fetchVerse = async (chapter) => {
+
+setLoading(true);
+
+try {
+
+const response = await axios.get(`https://api.example.com/gita/verses?chapter=${chapter}`);
+
+setVerse(response.data.verse); // Assuming response structure has 'verse'
+
+} catch (error) {
+
+console.error("Error fetching the verse:", error);
+
+} finally {
+
+setLoading(false);
+
+}
+
 };
+
+
+
+const handleChapterChange = (e) => {
+
+setChapter(e.target.value);
+
+};
+
+
+
+return (
+
+<div>
+
+<h1>Gita Verse Fetcher</h1>
+
+<select onChange={handleChapterChange}>
+
+<option value={1}>Chapter 1</option>
+
+<option value={2}>Chapter 2</option>
+
+{/* Add more options for other chapters */}
+
+</select>
+
+{loading ? <p>Loading...</p> : <p>{verse}</p>}
+
+</div>
+
+);
+
+};
+
+
 
 export default VerseFetcher;
 ```
@@ -120,9 +160,9 @@ export default VerseFetcher;
 
 1. **Start the Development Server**:
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
 2. **Open in Browser**: Visit `http://localhost:3000` to see your Gita Verse Fetcher in action!
 
@@ -131,10 +171,15 @@ export default VerseFetcher;
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
+  
 2. Create a new branch (`git checkout -b feature/YourFeature`)
+  
 3. Make your changes and commit them (`git commit -m 'Add some feature'`)
+  
 4. Push to the branch (`git push origin feature/YourFeature`)
+  
 5. Open a pull request
+  
 
 ## License
 
@@ -143,13 +188,17 @@ This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE
 ## Acknowledgements
 
 - Special thanks to the mentors and contributors who helped shape this project.
+  
 - Inspiration from various open-source projects.
+  
 
 ## Contact
 
 For any queries or feedback, feel free to reach out at:
 
 - Email: atinsharma24@gmail.com
+  
 - GitHub: [atinsharma24](https://github.com/atinsharma24)
-```
+  
 
+```
