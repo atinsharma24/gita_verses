@@ -1,6 +1,8 @@
 # Gita Verse Fetcher
 
-![Gita Verse Fetcher](image-preview/images/ggv_img.jpg)
+![Gita Verse Fetcher](https://i.imgur.com/IXrOvog.jpg)
+
+<!-- [Imgur](https://i.imgur.com/IXrOvog.jpg) -->
 
 Welcome to the Gita Verse Fetcher, an interactive web application designed to explore the profound spiritual wisdom of the Bhagavad Gita – an ancient Indian scripture. The Bhagavad Gita is presented as a conversation between Prince Arjuna and Lord Krishna, who serves as his charioteer. This dialogue takes place on the battlefield of Kurukshetra, just before a great war between two factions of the same royal family, the Pandavas, and the Kauravas. The Gita addresses timeless philosophical questions, offering guidance on duty, righteousness, self-realization, devotion, knowledge, and selfless action.
 
