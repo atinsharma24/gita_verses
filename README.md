@@ -2,7 +2,7 @@
 
 <!-- ![Gita Verse Fetcher](https://i.imgur.com/IXrOvog.jpg) -->
 
-<img src="https://i.imgur.com/IXrOvog.jpg" alt="Gita Verse Fetcher" style="max-width: 100%; height: auto;" />
+<img src="https://i.imgur.com/IXrOvog.jpg" alt="Gita Verse Fetcher" style="max-width: 80%; height: auto;" />
 
 
 
