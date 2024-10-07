@@ -1,8 +1,8 @@
 # Gita Verse Fetcher
 
-![Gita Verse Fetcher](https://i.imgur.com/IXrOvog.jpg)
+<!-- ![Gita Verse Fetcher](https://i.imgur.com/IXrOvog.jpg) -->
 
-<img src="https://i.imgur.com/IXrOvog.jpg" alt="Gita Verse Fetcher" width="300" height="200" />
+<img src="https://i.imgur.com/IXrOvog.jpg" alt="Gita Verse Fetcher" style="max-width: 100%; height: auto;" />
 
 
 
