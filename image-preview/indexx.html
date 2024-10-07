@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-image 0.5s ease;
+        }
+        .image-preview {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-preview" id="imagePreview"></div>
+<button onclick="nextImage()">Next Image</button>
+
+<script>
+    let images = [];
+    let currentIndex = 0;
+
+    fetch('/images-list')
+        .then(response => response.json())
+        .then(data => {
+            images = data.map(file => `/images/${file}`);
+            nextImage(); // Load the first image
+        })
+        .catch(error => console.error('Error fetching images:', error));
+
+    function nextImage() {
+        const imagePreview = document.getElementById('imagePreview');
+        imagePreview.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Optional: Automatically cycle through images every 3 seconds
+    // setInterval(nextImage, 3000);
+</script>
+
+</body>
+</html>
