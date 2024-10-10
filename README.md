@@ -7,12 +7,16 @@
 
 
 <!-- [Imgur](https://i.imgur.com/IXrOvog.jpg) -->
-<div style="display: flex; justify-content: center;">
-  <img src="https://wallpapercave.com/wp/wp11930720.jpg" alt="Gita Verse Fetcher" style="border-radius:10px; height:60%; width:60%; max-width: 100%;" />
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <img src="https://wallpapercave.com/wp/wp11930720.jpg" alt="Gita Verse Fetcher" style="border-radius: 10px; max-width: 60%; height: auto;" />
 </div>
 
 
+![Gita Verse Fetcher](https://wallpapercave.com/wp/wp11930720.jpg)
+
+
 Welcome to the Gita Verse Fetcher, an interactive web application designed to explore the profound spiritual wisdom of the Bhagavad Gita – an ancient Indian scripture. Theccc Bhagavad Gita is presented as a conversation between Prince Arjuna and Lord Krishna, who serves as his charioteer. This dialogue takes place on the battlefield of Kurukshetra, just before a great war between two factions of the same royal family, the Pandavas, and the Kauravas. The Gita addresses timeless philosophical questions, offering guidance on duty, righteousness, self-realization, devotion, knowledge, and selfless action.
+
 
 ## Features
 
