@@ -75,7 +75,9 @@ document.getElementById("generateBtn").addEventListener("click", function () {
   const chapter = document.getElementById("chapterInput").value;
   const verse = document.getElementById("verseInput").value;
 
-  const externalUrl = `https://cors-anywhere.herokuapp.com/https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+  // const externalUrl = `https://cors-anywhere.herokuapp.com/https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+  const externalUrl = `https://api.allorigins.win/raw?url=https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+
 
   
 

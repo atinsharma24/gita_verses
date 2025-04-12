@@ -30,7 +30,10 @@ function populateChapterSelect() {
 
 async function fetchVerse(chapter, verse) {
     // https://cors-anywhere.herokuapp.com/
-    const url = `https://cors-anywhere.herokuapp.com/https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+    // const url = `https://cors-anywhere.herokuapp.com/https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+    const url = `https://api.allorigins.win/raw?url=https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+
+
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error('Network response was not ok');
